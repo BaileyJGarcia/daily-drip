@@ -1,0 +1,136 @@
+@import './variables',
+'./mixins', 
+'./global';
+
+#hero-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 92vh;
+    background-color: $light-brown;
+    
+    .hero-text {
+        margin-left: 10%;
+
+        span {
+            font-family: 'Berkshire Swash', serif;
+        }
+        
+        p {
+            width: 28%;
+            padding: 40px 0;
+        }
+    }
+    
+    .hero-background {
+        position: absolute;
+        top: -14%;
+        right: 0;
+    }
+
+    .hero-cup {
+        position: absolute;
+        top: -4%;
+        right: 24%;
+
+        svg {
+            width: 98%;
+            height: 98%;
+        }
+    }  
+}
+
+#about-section {
+    position: relative;
+    @include row-between;
+    height: 100vh;
+
+    .about-text {
+        @include column-center;
+        gap: 50px;
+
+        h2 {
+            padding-bottom: 40px;
+        }
+
+        p {
+            width: 80%;
+        }
+    }
+
+    svg {
+        position: absolute;
+        top: 14%;
+        right: 2%;
+        height: 90%;
+        width: 12%;
+        z-index: -1;
+    }
+
+    img {
+        margin: 0 18px 0 100px;
+        filter: drop-shadow(16px 16px 0 $dark-brown);
+    }
+}
+
+#statement-section {
+    background-color: $dark-brown;
+    @include row-center;
+    
+    h3 {
+        width: 56%;
+        margin: 150px 0;
+        color: $white;
+        font-family: 'Berkshire Swash', serif;
+        font-size: 46px;
+    }
+}
+
+#menu-section {
+    position: relative;
+
+    h2 {
+        @include row-center;
+        gap: 14px;
+        margin-top: 50px;
+
+        span {
+            font-family: 'Berkshire Swash', serif;
+        }
+    }
+
+    .menu-title {
+        @include row;
+        gap: 30px;
+        padding: 100px 0 40px 300px;
+        text-transform: uppercase;    
+    }
+
+    .menu-items {
+       @include row;
+       gap: 100px;
+       padding-left: 300px;
+
+       .menu-types, .menu-prices {
+           @include column;
+           gap: 10px;
+       }
+   }
+
+   .menu-1 {
+    @include row;
+    gap: 300px;
+    margin-bottom: 100px;
+   }
+
+   .menu-2 {
+    margin-bottom: 200px;
+   }
+   
+   .menu-beans-1 {
+        position: absolute;
+        top: 46%;
+        right: 50%;
+    }
+    
+}
